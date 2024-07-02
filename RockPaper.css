@@ -1,0 +1,33 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: bisque;
+}
+
+.Elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    margin: 5px;
+}
+
+.Text_Area {
+        margin-top: 20px;
+        font-size: larger;
+        width: 450px;
+        height: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        /* Ensures padding is included in the width and height */
+        resize: none;
+        /* Prevents resizing */
+        background-color: lightyellow;
+        /* Optional: Background color */
+        border: 2px solid #3e3636;
+        /* Optional: Border style */
+        cursor: not-allowed;
+}

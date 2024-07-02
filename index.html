@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="RockPaper.css">
+        <title>
+           RockPaper
+        </title>
+    </head>
+    <body>
+<div class =" Elements">
+    <div class="options">
+        <button class="Rock" id="rock" onclick="RockAct();">
+            <img src="Rock.png">
+        </button>
+        <button class="Paper" id="paper" onclick="PaperAct();">
+            <img src="Paper.png">
+        </button>
+        <button class="Scissor" id="scissor" onclick="ScissorAct();">
+            <img src="Scissors.png">
+        </button>
+    </div>
+    <div class="Text">
+        <textarea class="Text_Area">
+        </textarea>
+    </div>
+            
+</div>
+
+
+        <script>
+            const Options_for_bot=['Rock 🪨','Paper 📄','Scissor ✂️'];
+            let Mychoice;
+            let bot_choice
+
+
+            function RockAct() {
+            Mychoice ='Rock 🪨';
+            textArea = document.querySelector('.Text_Area');
+            var randomNumber = Math.floor(Math.random() * 3);
+            bot_choice=Options_for_bot[randomNumber];
+            var backgrould_color
+                
+            if(bot_choice ==='Rock 🪨')
+            {
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: Draw';
+            }
+            else if ( bot_choice === 'Paper 📄'){
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: You Lose';
+            }
+            else if (bot_choice === 'Scissor ✂️')
+            {
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice +  '\nResult: You Win';
+            }
+
+                var textarea = document.querySelector('.Text_Area');
+                var computedStyle = window.getComputedStyle(textarea);
+                var backgroundColor = computedStyle.backgroundColor;
+                backgroundColor = backgroundColor.toLowerCase().trim();
+
+                if (backgroundColor === 'rgb(255, 255, 224)' || backgroundColor === 'lightyellow') {
+                    textarea.style.backgroundColor = 'lightgreen';
+                } else if (backgroundColor === 'rgb(144, 238, 144)' || backgroundColor === 'lightgreen') {
+                    textarea.style.backgroundColor = 'lightyellow';
+                }
+
+
+
+
+        }
+        function PaperAct() {
+            Mychoice = 'Paper 📄';
+            textArea = document.querySelector('.Text_Area');
+            var randomNumber = Math.floor(Math.random() * 3);
+            bot_choice = Options_for_bot[randomNumber];
+
+            if (bot_choice === 'Rock 🪨') {
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: You Win';
+            }
+            else if (bot_choice === 'Paper 📄') {
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: Draw';
+            }
+            else if (bot_choice === 'Scissor ✂️') {
+                textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice +  '\nResult: You Lose';
+            }
+
+
+            var textarea = document.querySelector('.Text_Area');
+            var computedStyle = window.getComputedStyle(textarea);
+            var backgroundColor = computedStyle.backgroundColor;
+            backgroundColor = backgroundColor.toLowerCase().trim();
+
+            if (backgroundColor === 'rgb(255, 255, 224)' || backgroundColor === 'lightyellow') {
+                textarea.style.backgroundColor = 'lightgreen';
+            } else if (backgroundColor === 'rgb(144, 238, 144)' || backgroundColor === 'lightgreen') {
+                textarea.style.backgroundColor = 'lightyellow';
+            }
+
+
+
+            }
+
+            function ScissorAct() {
+                Mychoice = 'Scissor ✂️';
+                textArea = document.querySelector('.Text_Area');
+                var randomNumber = Math.floor(Math.random() * 3);
+                bot_choice = Options_for_bot[randomNumber];
+
+                if (bot_choice === 'Rock 🪨') {
+                    textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: You Lose';
+                }
+                else if (bot_choice === 'Paper 📄') {
+                    textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: You Win';
+                }
+                else if (bot_choice === 'Scissor ✂️') {
+                    textArea.value = 'My Choice: ' + Mychoice + '\nBot Choice: ' + bot_choice + '\nResult: Draw';
+                }
+
+   var textarea = document.querySelector('.Text_Area');
+                var computedStyle = window.getComputedStyle(textarea);
+                var backgroundColor = computedStyle.backgroundColor;
+                backgroundColor = backgroundColor.toLowerCase().trim();
+
+                if (backgroundColor === 'rgb(255, 255, 224)' || backgroundColor === 'lightyellow') {
+                    textarea.style.backgroundColor = 'lightgreen';
+                } else if (backgroundColor === 'rgb(144, 238, 144)' || backgroundColor === 'lightgreen') {
+                    textarea.style.backgroundColor = 'lightyellow';
+                }
+
+
+            }
+            
+            
+        </script>
+    </body>
+</html>
